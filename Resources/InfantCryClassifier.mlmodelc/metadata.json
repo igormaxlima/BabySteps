@@ -1,0 +1,81 @@
+[
+  {
+    "metadataOutputVersion" : "3.0",
+    "outputSchema" : [
+      {
+        "isOptional" : "0",
+        "formattedType" : "String",
+        "type" : "String",
+        "name" : "target",
+        "shortDescription" : ""
+      },
+      {
+        "isOptional" : "0",
+        "keyType" : "String",
+        "formattedType" : "Dictionary (String → Double)",
+        "type" : "Dictionary",
+        "name" : "targetProbability",
+        "shortDescription" : ""
+      }
+    ],
+    "modelParameters" : [
+
+    ],
+    "author" : "Igor Max de Lima Nunes",
+    "specificationVersion" : 6,
+    "isUpdatable" : "0",
+    "stateSchema" : [
+
+    ],
+    "availability" : {
+      "macOS" : "12.0",
+      "tvOS" : "15.0",
+      "visionOS" : "1.0",
+      "watchOS" : "8.0",
+      "iOS" : "15.0",
+      "macCatalyst" : "15.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_pipelineClassifier",
+      "structure" : [
+        {
+          "name" : "MLModelType_audioFeaturePrint"
+        },
+        {
+          "name" : "MLModelType_glmClassifier"
+        }
+      ]
+    },
+    "inputSchema" : [
+      {
+        "dataType" : "Float32",
+        "hasShapeFlexibility" : "1",
+        "isOptional" : "0",
+        "shapeFlexibility" : "8000...240000",
+        "shapeRange" : "[[8000, 240000]]",
+        "formattedType" : "MultiArray (Float32 80000)",
+        "type" : "MultiArray",
+        "shape" : "[80000]",
+        "name" : "audioSamples",
+        "shortDescription" : ""
+      }
+    ],
+    "classLabels" : [
+      "background",
+      "belly_pain",
+      "burping",
+      "discomfort",
+      "hungry",
+      "tired"
+    ],
+    "generatedClassName" : "InfantCryClassifier",
+    "userDefinedMetadata" : {
+      "com.apple.createml.app.tag" : "150",
+      "com.apple.createml.version" : "15.2.0",
+      "com.apple.coreml.model.preview.type" : "soundClassifier",
+      "com.apple.createml.app.version" : "6.0 Beta",
+      "sampleRate" : "16000"
+    },
+    "method" : "predict"
+  }
+]
